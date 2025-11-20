@@ -21,24 +21,51 @@
 //     </div>
 //   </section>
 
+// let numVisitaw;
 
 
+// localStorage.setItem("contador",0)
+//  console.log("entrada 0",localStorage.getItem("contador"))
+//  if (localStorage.getItem("contador")=== 0){
+// let contador =contador+1
+// localStorage.setItem("contador",contador)
+// console.log("seria la primera",localStorage.getItem("contador"))
 
-localStorage.setItem("contador",0)
- console.log("entrada 0",localStorage.getItem("contador"))
- if (localStorage.getItem("contador")=== 0){
-let contador =contador+1
-localStorage.setItem("contador",contador)
-console.log("seria la primera",localStorage.getItem("contador"))
-
-// const sumador1 = (localStorage.getItem("contador"));
-// sumadorcont0 =sumadorcont0+1
- }
- else {
+// // const sumador1 = (localStorage.getItem("contador"));
+// // sumadorcont0 =sumadorcont0+1
+//  }
+//  else {
     
- let sumadorcont =(localStorage.getItem("contador"));
- sumadorcont = sumadorcont+1;
- localStorage.setItem("contador",sumadorcont)
- console.log("varias",localStorage.getItem("contador"))
+//  let sumadorcont =(localStorage.getItem("contador"));
+//  sumadorcont = sumadorcont+1;
+//  localStorage.setItem("contador",sumadorcont)
+//  console.log("varias",localStorage.getItem("contador"))
 
+// }
+
+//^+`+`+`+`+`+``+`+`+`+`+`+`+`+`+`+`2 intento
+
+// HICIMO ON LOcalstorage.clear(); POR QUE ESTABA DANDO ERROR CON LO DE ARRIBA!!!!!!
+let Nvisitas
+console.log("aqui nvisitas es undefined:",Nvisitas)
+const KEY = "contador";
+console.log(localStorage.getItem(KEY))
+// vale ahora trabajaremos con que localStorage.getItem(KEY) da null
+if (localStorage.getItem(KEY)=== null){
+    Nvisitas = 1
+localStorage.setItem(KEY,String(Nvisitas))
+console.log("esta es la primera entrada AQUI NVISITAS VALE 1::>",Nvisitas)
+}
+ else {
+    // convertir string a número
+    let n = parseInt(raw, 10);
+
+    // manejar errores por si algo falló
+    if (Number.isNaN(n)) {
+        n = 0;
+    }
+
+    visitas = n + 1;
+    localStorage.setItem(KEY, String(visitas));
+    console.log("Visita número:", visitas);
 }
